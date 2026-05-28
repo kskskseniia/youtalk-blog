@@ -1,0 +1,130 @@
+.footer {
+  padding: 40px 0 17px;
+  color: var(--color-white);
+  background-color: var(--color-footer);
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 310px minmax(320px, 486px) 221px;
+  justify-content: space-between;
+  gap: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(157, 157, 157, 0.3);
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.footer-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav__link {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.footer-nav__link:hover {
+  opacity: 0.75;
+}
+
+.subscribe__title {
+  max-width: 384px;
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.44;
+  font-weight: 700;
+}
+
+.subscribe__form {
+  position: relative;
+  max-width: 384px;
+  margin-bottom: 8px;
+}
+
+.subscribe__input {
+  width: 100%;
+  height: 48px;
+  padding: 14px 64px 14px 16px;
+  border: 1px solid rgba(157, 157, 157, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.subscribe__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-primary-dark);
+}
+
+.subscribe__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+  transform: translate(-65%, -50%) rotate(45deg);
+}
+
+.subscribe__text {
+  max-width: 486px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.social__skolkovo {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.social__list {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.footer__bottom {
+  display: flex;
+  gap: 48px;
+  padding-top: 16px;
+  font-size: 14px;
+  line-height: 1.43;
+  opacity: 0.7;
+}
+
+.footer__copyright {
+  margin: 0;
+}
+
+.footer__document:hover {
+  text-decoration: underline;
+}

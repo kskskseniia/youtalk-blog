@@ -1,0 +1,405 @@
+/* ==============================
+   Adaptive styles
+   ============================== */
+
+
+/* ---------- 1024px and lower ---------- */
+
+@media (max-width: 1024px) {
+  :root {
+    --container-width: 960px;
+    --container-padding: 32px;
+  }
+
+  .header__logo {
+    margin-right: 32px;
+  }
+
+  .nav__list {
+    gap: 16px;
+  }
+
+  .header__button {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .blog {
+    padding-top: 16px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+  }
+
+  .blog__title {
+    margin-bottom: 32px;
+    font-size: 48px;
+    line-height: 1.17;
+  }
+
+  .blog__tags {
+    margin-bottom: 24px;
+  }
+
+  /*
+    1024px:
+    как на десктопе:
+    2 большие карточки сверху,
+    ниже 3 маленькие карточки в ряд.
+  */
+
+  .cards {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .card--large {
+    grid-column: span 3;
+  }
+
+  .card:not(.card--large) {
+    grid-column: span 2;
+  }
+
+  .card--large .card__image-box {
+    height: 260px;
+  }
+
+  .card:not(.card--large) .card__image-box {
+    height: 206px;
+  }
+
+  .tags {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .footer__top {
+    grid-template-columns: 247px minmax(320px, 450px) 221px;
+    gap: 24px;
+  }
+}
+
+
+/* ---------- 768px and lower ---------- */
+
+@media (max-width: 768px) {
+  :root {
+    --container-width: 728px;
+    --container-padding: 20px;
+  }
+
+  .header__container {
+    min-height: 76px;
+  }
+
+  .header__nav,
+  .header__button {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .main {
+    padding-bottom: 60px;
+  }
+
+  .blog {
+    padding-top: 16px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+  }
+
+  .blog__title {
+    margin-bottom: 32px;
+    font-size: 48px;
+    line-height: 1.17;
+  }
+
+  .blog__tags {
+    margin-bottom: 24px;
+  }
+
+  /*
+    768px:
+    теги всё ещё переносятся строками,
+    без горизонтального скролла.
+  */
+
+  .tags {
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 8px;
+  }
+
+  /*
+    768px:
+    сетка из 2 колонок.
+    Верхние карточки идут по одной в ряд,
+    остальные карточки — по 2 в ряд.
+  */
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .card--large {
+    grid-column: 1 / -1;
+  }
+
+  .card:not(.card--large) {
+    grid-column: auto;
+  }
+
+  .card--large .card__image-box {
+    height: 404px;
+  }
+
+  .card:not(.card--large) .card__image-box {
+    height: 206px;
+  }
+
+  .card__content,
+  .card--large .card__content {
+    min-height: 196px;
+  }
+
+  .footer {
+    padding-top: 35px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: 26px 31px;
+  }
+
+  .footer__social {
+    grid-column: 1 / -1;
+  }
+
+  .footer__bottom {
+    gap: 32px;
+  }
+}
+
+
+/* ---------- 414px and lower ---------- */
+
+@media (max-width: 414px) {
+  :root {
+    --container-width: 374px;
+    --container-padding: 20px;
+  }
+
+  .header__container {
+    min-height: 72px;
+  }
+
+  .logo__image {
+    width: 48px;
+  }
+
+  .main {
+    padding-bottom: 60px;
+  }
+
+  .blog {
+    padding-top: 16px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 32px;
+  }
+
+  .blog__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .blog__tags {
+    margin-bottom: 16px;
+  }
+
+  /*
+    414px:
+    теги идут в одну горизонтальную линию
+    и скроллятся.
+  */
+
+  .tags {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 8px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .tags::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tags__button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /*
+    414px:
+    все карточки в одну колонку.
+  */
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .card,
+  .card--large,
+  .card:not(.card--large) {
+    grid-column: 1 / -1;
+  }
+
+  .card__image-box,
+  .card--large .card__image-box,
+  .card:not(.card--large) .card__image-box {
+    height: 206px;
+  }
+
+  .card__content,
+  .card--large .card__content {
+    min-height: auto;
+  }
+
+  .blog__button {
+    width: 182px;
+  }
+
+  .footer {
+    padding-top: 35px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .footer-nav {
+    max-width: 375px;
+  }
+
+  .subscribe__form {
+    max-width: 100%;
+  }
+
+  .subscribe__button {
+    display: none;
+  }
+
+  .subscribe__input {
+    padding-right: 16px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+/* ---------- 320px and lower ---------- */
+
+@media (max-width: 320px) {
+  :root {
+    --container-width: 288px;
+    --container-padding: 16px;
+  }
+
+  .header__container {
+    min-height: 56px;
+  }
+
+  .logo__image {
+    width: 48px;
+  }
+
+  .blog {
+    padding-top: 16px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 24px;
+  }
+
+  .blog__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  /*
+    320px:
+    теги тоже со скроллом.
+  */
+
+  .tags {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 8px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .tags::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tags__button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .card,
+  .card--large,
+  .card:not(.card--large) {
+    grid-column: 1 / -1;
+  }
+
+  .card__image-box,
+  .card--large .card__image-box,
+  .card:not(.card--large) .card__image-box {
+    height: 206px;
+  }
+
+  .card__title {
+    font-size: 18px;
+    line-height: 1.44;
+  }
+
+  .card__content,
+  .card--large .card__content {
+    min-height: auto;
+  }
+
+  .footer-nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
