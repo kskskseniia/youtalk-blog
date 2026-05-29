@@ -3,38 +3,6 @@
   padding-bottom: 96px;
 }
 
-.breadcrumbs {
-  margin-bottom: 30px;
-}
-
-.breadcrumbs__list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.breadcrumbs__item {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  line-height: 1.5;
-  color: rgba(51, 51, 51, 0.7);
-}
-
-.breadcrumbs__item:not(:last-child)::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  margin-left: 8px;
-  border-top: 1px solid rgba(51, 51, 51, 0.7);
-  border-right: 1px solid rgba(51, 51, 51, 0.7);
-  transform: rotate(45deg);
-}
-
 .blog__title {
   margin: 0 0 32px;
   font-size: 48px;
