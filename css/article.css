@@ -636,7 +636,6 @@
 .video-offer__text {
   max-width: 178px;
   margin: 0 0 16px;
-  font-size: 14px;
   line-height: 1.43;
   color: var(--color-text);
 }
