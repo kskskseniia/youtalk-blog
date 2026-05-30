@@ -19,6 +19,10 @@
         padding-left: 16px;
     }
 
+    .blog-page {
+        padding-bottom: 60px;
+    }
+
     .blog {
         padding-top: 16px;
     }
@@ -90,10 +94,6 @@
 
     .header__burger {
         display: flex;
-    }
-
-    .main {
-        padding-bottom: 60px;
     }
 
     .blog {
@@ -182,7 +182,7 @@
         width: 48px;
     }
 
-    .main {
+    .blog-page {
         padding-bottom: 60px;
     }
 
@@ -483,7 +483,7 @@
 
     .article-page__container {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 0px;
         padding-bottom: 0px;
     }
 
@@ -643,11 +643,6 @@
     .article-page {
         padding-top: 16px;
         padding-bottom: 60px;
-    }
-
-    .article-page__container {
-        grid-template-columns: 1fr;
-        gap: 24px;
     }
 
     .article-page__breadcrumbs {

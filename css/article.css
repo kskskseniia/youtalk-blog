@@ -51,7 +51,6 @@
 /* Article */
 
 .article {
-    max-width: 690px;
     min-width: 0;
 }
 
@@ -481,14 +480,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-}
-
-.psychologist__badge {
-    padding: 3px 6px;
-    border-radius: 6px;
-    font-size: 12px;
-    line-height: 1.5;
-    background-color: rgba(243, 244, 248, 0.7);
 }
 
 .psychologist__avatar {
