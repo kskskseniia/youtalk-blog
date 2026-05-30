@@ -678,7 +678,7 @@
     }
 
     .center-quote {
-        padding: 24px 0 48px;
+        padding: 24px 0;
     }
 
     .article-figure__image {
@@ -757,6 +757,9 @@
 
     .article-figure__image {
         height: 160px;
+    }
+    .center-quote {
+        padding: 12px 0;
     }
 
     .center-quote::before {
